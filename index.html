@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo"
+            class="logo">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">New & Popular</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <button class="signin-btn">Sign In</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <h2>Watch anywhere. Cancel anytime.</h2>
+            <form class="email-form">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="content-row">
+        <h3>Popular on Netflix</h3>
+        <div class="card-list">
+            <div class="card"><img src="https://i.imgur.com/CSqn1NZ.jpg" alt="Movie 1"></div>
+            <div class="card"><img src="https://i.imgur.com/j6y4sQS.jpg" alt="Movie 2"></div>
+            <div class="card"><img src="https://i.imgur.com/SQo2qzT.jpg" alt="Movie 3"></div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <section class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <button class="faq-question">What is Netflix?</button>
+            <div class="faq-answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+                movies, anime, documentaries, and more on thousands of internet-connected devices.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How much does Netflix cost?</button>
+            <div class="faq-answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all
+                for one low monthly fee. Plans range from $6.99 to $22.99 per month. No extra costs, no contracts.</div>
+        </div>
+        <!-- Add more FAQ items -->
+    </section>
+
+    <section class="database-content">
+        <h3>Movie Database</h3>
+        <div class="database-info">
+            <p>Data loaded from Firebase database</p>
+        </div>
+        <button id="loadDataBtn">Load Data from Database</button>
+        <div id="dataContainer" class="data-container">
+            <!-- Data will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Netflix Clone for demo purposes</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>
